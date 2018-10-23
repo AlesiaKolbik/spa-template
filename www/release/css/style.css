@@ -55,9 +55,7 @@ header{
     height: 90px;
     transition: all .1s linear;
 }
-.header__logo:hover{
-    transform: skew(10deg);
-}
+
 header p{
     display: inline-block;
     margin-top:40px;
@@ -288,7 +286,9 @@ footer div{
 
 .social{
     font-size: 3em;
-
+}
+footer a:hover{
+    color: #2c2c2c;
 }
 
 
@@ -439,6 +439,17 @@ footer div{
     transition: 3s linear all;
 }
 
+.box__animation:after{
+    content: attr(data-text);
+    position: absolute;
+    color:white;
+    font-size: 30px;
+    top:50%;
+    left: 10%;
+    z-index: 10;
+    display: none;
+    transition: 1s linear display;
+}
 
 
     /*about page*/
@@ -479,8 +490,6 @@ footer div{
      text-align: justify;
      font-size: 20px;
 }
-
-
 
 
 /*info-for-order*/
@@ -623,9 +632,8 @@ footer div{
 
 /*404*/
 .content-404 {
-    width: 50%;
-    padding-top: 15%;
     position: relative;
+    overflow: hidden;
 }
 
 .content-404 h1, .content-404 p {
@@ -1126,6 +1134,10 @@ footer div{
         transform: scale(1.1);
 
     }
+    .box__animation:hover::after{
+        display: inline-block;
+        text-shadow: #9d9696 8px 3px 3px;
+    }
 
     .box__animation:hover > img {
         transition: 3s linear all;
@@ -1256,6 +1268,12 @@ footer div{
 
 
 }
+@media (min-width: 1024px) {
+    #fullpage{
+        transition: .8s all linear;
+    }
+}
+
 
 @media (max-width: 938px) {
     .slider{
@@ -1373,3 +1391,5 @@ footer div{
         right: 5%;
     }
 }
+
+
