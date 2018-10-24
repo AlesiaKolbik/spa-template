@@ -38,26 +38,22 @@ function scrollPages() {
     let lengthScroll = 0;
 
     document.onwheel = function (e) {
-
+        e.preventDefault();
         if (window.innerWidth <= 1024) {
             return;
         }
-
         if (e.deltaY > 0) {
             if (Math.abs(lengthScroll + lengthSection) < lengthFullpade) {
                 lengthScroll += lengthSection;
                 fullpade.setAttribute('style', 'height:' + heightWindow * counterSections + 'px ;transform:translateY(-' + lengthScroll + 'px)');
             }
-
         }
-
         if (e.deltaY < 0) {
             if (-lengthScroll < 0) {
                 lengthScroll -= lengthSection;
                 fullpade.setAttribute('style', 'height:' + heightWindow * counterSections + 'px ;transform:translateY(-' + lengthScroll + 'px)');
 
             }
-
         }
     }
 }

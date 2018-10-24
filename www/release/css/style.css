@@ -92,7 +92,7 @@ header p{
     height: 30px;
     background: #b4b4b4;
     position: absolute;
-    left: 60px;
+    left: 72px;
 }
 
 .burger-trigger{
@@ -632,37 +632,52 @@ footer a:hover{
 
 /*404*/
 .content-404 {
+   width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.content-404 .animation{
     position: relative;
-    overflow: hidden;
+}
+.content-404 .header{
+    margin: 100px 0 20px 0;
 }
 
-.content-404 h1, .content-404 p {
+.content-404 h2, .content-404 p {
     color: #474747;
     text-align: center;
 }
 
 .content-404 p {
     padding-top: 20px;
-    font-size: 1.2em;
+    font-size: 20px;
 }
 
 .content-404 a {
     color: #26D2AE;
 }
 
-.content-404 div {
-    width: 800px;
-    height: 350px;
+.content-404 .butterfly{
+    width: 100%;
+    height: 100%;
     overflow: hidden;
     position: absolute;
-    right: calc(50% - 400px);
+    right: 0;
 }
 
-.content-404 img {
+
+.animation > img {
+    position: relative;
+    z-index: 2;
+    display: block;
     width: 100%;
 }
 
-.butterfly img {
+.butterfly img{
     width: 40px;
     display: inline-block;
     position: absolute;
@@ -1112,7 +1127,6 @@ footer a:hover{
     height: 100vh;
     z-index: 200;
     justify-content: center;
-
 }
 .fullpage .slick-prev:before,.fullpage .slick-next:before{
     color: white;
