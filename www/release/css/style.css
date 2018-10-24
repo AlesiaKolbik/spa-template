@@ -1192,11 +1192,6 @@ footer a:hover{
         font-size: 20px;
     }
 
-    .header__language:before {
-        height: 22px;
-        left: 56px;
-    }
-
     .nav_opened .nav,
     .subnav_opened .nav_subnav {
         width: 100%;
