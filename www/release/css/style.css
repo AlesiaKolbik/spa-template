@@ -84,15 +84,17 @@ header p{
     color: #323232;
 }
 
-
-.header__language:before{
+.header__language-item:first-child{
+    position: relative;
+}
+.header__language-item:first-child:before{
     content:"";
     display: inline-block;
     width: 2px;
-    height: 30px;
+    height: 24px;
     background: #b4b4b4;
     position: absolute;
-    left: 72px;
+    right: -2px;
 }
 
 .burger-trigger{
